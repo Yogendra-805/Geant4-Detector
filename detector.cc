@@ -25,11 +25,13 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* ROhis
     //     G4cout << "Energy Deposit: " << energyDeposit << " MeV" << G4endl;
     // };
 
+
+
  
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
 
-    if (energyDeposit != 0.) { 
+
        
         G4AnalysisManager *man = G4AnalysisManager::Instance();
         man->FillNtupleIColumn(0, evt);
@@ -41,8 +43,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* ROhis
         man->FillNtupleSColumn(6, track->GetDefinition()->GetParticleName());
 
         man->AddNtupleRow(0);
-    }
+
 
 
     return true;
 }
+
+
