@@ -8,7 +8,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
     G4String particleName = "pi0";
     G4ParticleDefinition *particle = particleTable->FindParticle("pi0");
 
-    G4ThreeVector pos(0., 0., -20. * cm);
+    G4ThreeVector pos(0., 0., -5. * cm);
 
     // Generate random angles and random energy
     G4double theta = G4UniformRand() * 180.0 * deg; // Random polar angle in the range [0, 180] degrees
